@@ -1,4 +1,4 @@
-function greet(name) {
+function hello(name) {
     console.log("Hello, ".concat(name, "!"));
 }
-greet(1);
+hello('d');

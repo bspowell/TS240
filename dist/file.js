@@ -1,4 +1,5 @@
 "use strict";
-function team(person, date) {
-    console.log(`Hello ${person}, today is ${date.toDateString()}!`);
+function greet(name) {
+    console.log(`Hello, ${name}!`);
 }
+greet('d');
