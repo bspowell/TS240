@@ -1,3 +1,5 @@
+function combine(input1: string, input2: string): string;
+function combine(input1: number, input2: number): number;
 function combine(
   input1: string | number,
   input2: string | number

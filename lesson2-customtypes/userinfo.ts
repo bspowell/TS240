@@ -6,7 +6,7 @@ function addNumbers(a: number, b: number): number {
   return a + b;
 }
 
-function combine(a: stringNum, b: stringNum): string | number {
+function join(a: stringNum, b: stringNum): string | number {
   if (typeof a === 'string' && typeof b === 'string') {
     let mystring: string;
     mystring = a + b;
@@ -16,7 +16,7 @@ function combine(a: stringNum, b: stringNum): string | number {
     myNum = a + b;
     return myNum;
   } else {
-    throw new Error('Invalid both types')
+    throw new Error('Invalid both tpye')
   }
 }
 type stringNum = string | number
