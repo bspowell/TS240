@@ -1,21 +1,38 @@
-type Dog = {
-  name: string,
-  age: number
-}
+type Elephant = {
+  kind: "elephant";
+  weight: number;
+};
 
-type Bird = {
-  name: string,
-  wingspan: number,
-}
+type Tiger = {
+  kind: "tiger";
+  speed: number;
+};
 
-type Animal = Dog | Bird // implementation for Animal
+type Peacock = {
+  kind: "peacock";
+  featherLength: number;
+};
+
+type Animal = Elephant | Tiger | Peacock ;
 
  function describeAnimal(animal: Animal): string {
-  if ('wingspan' in animal) {
-    return `${animal.name} is a bird with a ${animal.wingspan}cm wingspan`
-  } else {
-    return `${animal.name} is a ${animal.age} year old dog`
+  
+  switch(animal.kind) {
+    case "elephant":
+      return `I'm a ${animal.kind} and I weigh ${animal.weight}`
+      break;
+    case "peacock":
+      return `I'm a ${animal.kind} and I have ${animal.featherLength} feathers`
+      break;
+    case "tiger":
+      return `I'm a ${animal.kind} and I run ${animal.speed}km/h`
+      break;
+    default:
+      const _exhaustiveCheck: never = animal;
+
+      throw new Error (`Invalid shape ${JSON.stringify(_exhaustiveCheck)}`)
   }
 }
 
-describeAnimal({name: 'rover', age: 1})
+const elTiger: Tiger = { kind: 'tiger', speed: 80 }
+console.log(describeAnimal(elTiger))
