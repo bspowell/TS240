@@ -1,10 +1,5 @@
-type Animal = {
-	species: string
-	legs: string
-  wings: string
-}
-
-let dog: Partial<Animal> = {
-	species: 'canine',
-  legs: '4'
+function logUnknown(param: unknown):void {
+  if (typeof param === 'string') {
+    console.log('its a string')
+  }
 }
